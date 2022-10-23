@@ -8,9 +8,9 @@ import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import kr.duckcade.kockkock.ui.Navigation
-import kr.duckcade.kockkock.ui.Screen
 import kr.duckcade.kockkock.ui.theme.KockKockTheme
-import kr.duckcade.kockkock.ui.theme.Yellow100
+import kr.duckcade.kockkock.ui.theme.Yellow
+import kr.duckcade.kockkock.ui.utils.Screen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,12 +18,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             KockKockTheme {
                 Surface(
-                    color = Yellow100,
+                    color = Yellow,
                     modifier = Modifier.fillMaxSize()
                 ) {
                     val navController = rememberNavController()
                     Navigation(navController)
-                    navController.navigate(Screen.SplashScreen.route)
                 }
             }
         }
